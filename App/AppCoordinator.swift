@@ -8,6 +8,11 @@
 //
 
 import UIKit
+import RxSwift
+
+protocol UIViewControllerCoordinable {
+    func start()
+}
 
 class AppCoordinator: NSObject {
 
@@ -23,7 +28,20 @@ class AppCoordinator: NSObject {
         return false
     }
     
-    func start() {
+    private func instanceLoginController() {
+        let vc = LoginViewController()
+        vc.transitions = LoginTransitions(
+            didLogin: {
+                self.instanceFeedController()
+            }
+        )
     }
     
+    private func instanceFeedController() {
+        
+    }
+    
+    func start() {
+        self.isLogged() ? self.instanceFeedController() : self.instanceLoginController()
+    }
 }
