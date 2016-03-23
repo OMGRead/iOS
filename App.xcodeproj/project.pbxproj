@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1D91081CA2C6A7007379B9 /* PersoContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D91071CA2C6A7007379B9 /* PersoContentViewController.swift */; };
+		BB1D910A1CA2C6BA007379B9 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D91091CA2C6BA007379B9 /* NetworkViewController.swift */; };
 		BB7345821CA2631D00AD2586 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7345811CA2631C00AD2586 /* Login.storyboard */; };
 		BB7345841CA2634A00AD2586 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7345831CA2634A00AD2586 /* Detail.storyboard */; };
 		BB7345861CA26EB200AD2586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7345851CA26EB200AD2586 /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		579AE6F074C8A9EA2BB2A31C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8AEAB307670D1CC694DF34BD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB1D91071CA2C6A7007379B9 /* PersoContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersoContentViewController.swift; sourceTree = "<group>"; };
+		BB1D91091CA2C6BA007379B9 /* NetworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		BB7345811CA2631C00AD2586 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BB7345831CA2634A00AD2586 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		BB7345851CA26EB200AD2586 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				BBA1C82A1CA1545200D28C30 /* LoginViewController.swift */,
 				BBA1C82E1CA15B0D00D28C30 /* FeedViewController.swift */,
 				BBA1C8151CA035DF00D28C30 /* AppDelegate.swift */,
+				BB1D91071CA2C6A7007379B9 /* PersoContentViewController.swift */,
+				BB1D91091CA2C6BA007379B9 /* NetworkViewController.swift */,
 				BBA1C8291CA122BE00D28C30 /* Storyboards */,
 				BBA1C81C1CA035DF00D28C30 /* Assets.xcassets */,
 				BBA1C8211CA035DF00D28C30 /* Info.plist */,
@@ -245,8 +251,10 @@
 				BBA1C82B1CA1545200D28C30 /* LoginViewController.swift in Sources */,
 				BBA1C82F1CA15B0D00D28C30 /* FeedViewController.swift in Sources */,
 				BB7345881CA27FFE00AD2586 /* MainTabBarViewController.swift in Sources */,
+				BB1D91081CA2C6A7007379B9 /* PersoContentViewController.swift in Sources */,
 				BBA1C8281CA1210A00D28C30 /* AppCoordinator.swift in Sources */,
 				BBA1C8161CA035DF00D28C30 /* AppDelegate.swift in Sources */,
+				BB1D910A1CA2C6BA007379B9 /* NetworkViewController.swift in Sources */,
 				BB73458A1CA294DE00AD2586 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

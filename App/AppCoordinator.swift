@@ -49,7 +49,7 @@ struct AppCoordinator {
     
     private mutating func instanceFeedController() {
         if let vc = MainTabBarViewController.instanceController(StoryBoards.Detail) as? MainTabBarViewController {
-            self.rootController = UINavigationController(rootViewController: vc)
+            self.rootController = vc
             vc.start()
         }
     }
