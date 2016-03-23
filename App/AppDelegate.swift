@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Parse
+import FBSDKCoreKit
+import ParseFacebookUtilsV4
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +20,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.initStyle()
+        
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "63966E18-33C1-431B-A50E-4F68652C2A4D"
+            $0.clientKey = "5B45972F-36B7-4FBB-85A0-B2EA733586CD"
+            $0.server = "http://localhost:8002/parse"
+        }
+        Parse.initializeWithConfiguration(configuration)
+        
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         self.appCoordinator.start()
         return true
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+    }
+    
+    func applicationDidBecomeActive(application: UIApplication) {
+        FBSDKAppEvents.activateApp()
     }
 }
 

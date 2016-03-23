@@ -9,6 +9,7 @@
 
 import UIKit
 import RxSwift
+import Parse
 
 protocol UIViewControllerCoordinable {
     func start()
@@ -28,7 +29,9 @@ struct AppCoordinator {
     }
     
     private func isLogged() -> Bool {
-        //check if user already logged
+        if let _ = PFUser.currentUser() {
+            return true
+        }
         return false
     }
     

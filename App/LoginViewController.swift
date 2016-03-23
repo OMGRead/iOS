@@ -8,6 +8,8 @@
 
 import UIKit
 import RxSwift
+import Parse
+import ParseFacebookUtilsV4
 
 struct LoginTransitions {
     var didLogin: (Void -> Void)
@@ -18,7 +20,11 @@ class LoginViewController: UIViewController, UIViewControllerCoordinable {
     var transitions: LoginTransitions?
     
     @IBAction func login(sender: AnyObject) {
-        self.transitions?.didLogin()
+        PFFacebookUtils.logInInBackgroundWithPublishPermissions(nil) { (user: PFUser?, error: NSError?) -> Void in
+            if let _ = user {
+                self.transitions?.didLogin()
+            }
+        }
     }
     
     override func viewDidLoad() {
