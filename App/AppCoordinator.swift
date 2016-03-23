@@ -14,13 +14,17 @@ protocol UIViewControllerCoordinable {
     func start()
 }
 
-class AppCoordinator: NSObject {
+struct AppCoordinator {
 
-    private let rootController: UIViewController
+    private var window: UIWindow
+    private var rootController: UIViewController! {
+        didSet {
+            self.window.rootViewController = self.rootController
+        }
+    }
     
-    required init(rootController: UINavigationController) {
-        self.rootController = rootController
-        super.init()
+    init(window: UIWindow) {
+        self.window = window
     }
     
     private func isLogged() -> Bool {
@@ -28,20 +32,26 @@ class AppCoordinator: NSObject {
         return false
     }
     
-    private func instanceLoginController() {
-        let vc = LoginViewController()
-        vc.transitions = LoginTransitions(
-            didLogin: {
-                self.instanceFeedController()
-            }
-        )
+    private mutating func instanceLoginController() {
+        if let vc = LoginViewController.instanceController(StoryBoards.Login) as? LoginViewController {
+            vc.transitions = LoginTransitions(
+                didLogin: {
+                    self.instanceFeedController()
+                }
+            )
+            self.rootController = UINavigationController(rootViewController: vc)
+            vc.start()
+        }
     }
     
-    private func instanceFeedController() {
-        
+    private mutating func instanceFeedController() {
+        if let vc = FeedViewController.instanceController(StoryBoards.Detail) as? FeedViewController {
+            self.rootController = UINavigationController(rootViewController: vc)
+            vc.start()
+        }
     }
     
-    func start() {
+    mutating func start() {
         self.isLogged() ? self.instanceFeedController() : self.instanceLoginController()
     }
 }

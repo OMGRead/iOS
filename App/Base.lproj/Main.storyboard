@@ -8,7 +8,7 @@
         <!--Navigation Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="UINavigationController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UINavigationController" id="BYZ-38-t0r" customClass="UINavigationController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

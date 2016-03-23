@@ -17,6 +17,16 @@ class LoginViewController: UIViewController, UIViewControllerCoordinable {
 
     var transitions: LoginTransitions?
     
+    @IBAction func login(sender: AnyObject) {
+        self.transitions?.didLogin()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.orangeColor()
+    }
+    
     func start() {
         print("start doing stuff here login controller")
     }
