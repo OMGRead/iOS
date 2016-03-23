@@ -26,11 +26,6 @@ extension NSObject {
 
 extension UIViewController {
     class func instanceController(storyboard: StoryBoards) -> UIViewController? {
-        print("storybiard : \(storyboard.rawValue)")
-        print("id : \(self.nameOfClass)")
         return storyboard.storyboard().instantiateViewControllerWithIdentifier(self.nameOfClass)
-        
-//        return UIStoryboard(name: "Login", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController")
-//        return storyboard.storyboard().instantiateViewControllerWithIdentifier("LoginViewController")
     }
 }
