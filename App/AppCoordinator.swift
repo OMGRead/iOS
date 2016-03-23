@@ -45,7 +45,7 @@ struct AppCoordinator {
     }
     
     private mutating func instanceFeedController() {
-        if let vc = FeedViewController.instanceController(StoryBoards.Detail) as? FeedViewController {
+        if let vc = MainTabBarViewController.instanceController(StoryBoards.Detail) as? MainTabBarViewController {
             self.rootController = UINavigationController(rootViewController: vc)
             vc.start()
         }

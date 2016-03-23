@@ -23,8 +23,8 @@ class LoginViewController: UIViewController, UIViewControllerCoordinable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = UIColor.orangeColor()
+        self.title = "Login"
+        self.view.backgroundColor = UIColor.blackColor()
     }
     
     func start() {

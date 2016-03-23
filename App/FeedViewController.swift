@@ -19,6 +19,12 @@ class FeedViewController: UIViewController, UIViewControllerCoordinable {
     var transitions: FeedTransitions?
     var completionHandler: (ResponseObject -> Void)?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Feedf"
+        self.view.backgroundColor = UIColor.blackColor()
+    }
+    
     func start() {
         print("start stuff feed controller")
     }
