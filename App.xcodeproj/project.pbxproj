@@ -23,6 +23,7 @@
 		BBA1C82D1CA155D300D28C30 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1C82C1CA155D300D28C30 /* UIViewController+Extensions.swift */; };
 		BBA1C82F1CA15B0D00D28C30 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1C82E1CA15B0D00D28C30 /* FeedViewController.swift */; };
 		BBA4ECD71CA2D1D300D0D29A /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA4ECD61CA2D1D300D0D29A /* Add.storyboard */; };
+		BBA4ECD91CA3725400D0D29A /* AddCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4ECD81CA3725300D0D29A /* AddCameraViewController.swift */; };
 		E67BEA739883B46170ED93F5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AEAB307670D1CC694DF34BD /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		BBA1C82C1CA155D300D28C30 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		BBA1C82E1CA15B0D00D28C30 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		BBA4ECD61CA2D1D300D0D29A /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
+		BBA4ECD81CA3725300D0D29A /* AddCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCameraViewController.swift; sourceTree = "<group>"; };
 		CE11831740D53E2D05093E85 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 				BB1D91071CA2C6A7007379B9 /* PersoContentViewController.swift */,
 				BB1D91091CA2C6BA007379B9 /* NetworkViewController.swift */,
 				BB1D910B1CA2CA1B007379B9 /* AppColors.swift */,
+				BBA4ECD81CA3725300D0D29A /* AddCameraViewController.swift */,
 				BBA1C8291CA122BE00D28C30 /* Storyboards */,
 				BBA1C81C1CA035DF00D28C30 /* Assets.xcassets */,
 				BBA1C8211CA035DF00D28C30 /* Info.plist */,
@@ -257,6 +260,7 @@
 				BBA1C82D1CA155D300D28C30 /* UIViewController+Extensions.swift in Sources */,
 				BBA1C82B1CA1545200D28C30 /* LoginViewController.swift in Sources */,
 				BBA1C82F1CA15B0D00D28C30 /* FeedViewController.swift in Sources */,
+				BBA4ECD91CA3725400D0D29A /* AddCameraViewController.swift in Sources */,
 				BB1D910C1CA2CA1B007379B9 /* AppColors.swift in Sources */,
 				BB7345881CA27FFE00AD2586 /* MainTabBarViewController.swift in Sources */,
 				BB1D91081CA2C6A7007379B9 /* PersoContentViewController.swift in Sources */,

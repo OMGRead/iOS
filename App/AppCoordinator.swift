@@ -35,6 +35,12 @@ struct AppCoordinator {
         return false
     }
     
+    private mutating func instanceAddCameraBookController() {
+        if let vc = AddCameraViewController.instanceController(StoryBoards.Add) as? AddCameraViewController {
+            self.rootController.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
     private mutating func instanceLoginController() {
         if let vc = LoginViewController.instanceController(StoryBoards.Login) as? LoginViewController {
             vc.transitions = LoginTransitions(
@@ -48,9 +54,17 @@ struct AppCoordinator {
     }
     
     private mutating func instanceFeedController() {
-        if let vc = MainTabBarViewController.instanceController(StoryBoards.Detail) as? MainTabBarViewController {
+        if let detailController = PersoContentViewController.instanceController(StoryBoards.Detail) as? PersoContentViewController {
+            let vc = MainTabBarViewController()
+            
+            detailController.transitions = PersoContentTransitions(
+                addNewBook: {
+                    self.instanceAddCameraBookController()
+                }
+            )
+            
+            vc.setViewControllers([UINavigationController(rootViewController: detailController)], animated: true)
             self.rootController = vc
-            vc.start()
         }
     }
     

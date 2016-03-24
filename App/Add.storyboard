@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Camera View Controller-->
         <scene sceneID="tgj-cx-Clo">
             <objects>
-                <viewController id="99p-t0-swG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddCameraViewController" id="99p-t0-swG" customClass="AddCameraViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GHi-rX-uck"/>
                         <viewControllerLayoutGuide type="bottom" id="H81-KI-Pcb"/>

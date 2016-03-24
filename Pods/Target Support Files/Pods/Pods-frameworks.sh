@@ -85,24 +85,24 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Bolts.framework"
+  install_framework "Pods/CameraEngine.framework"
   install_framework "Pods/DynamicColor.framework"
   install_framework "Pods/FBSDKCoreKit.framework"
   install_framework "Pods/FBSDKLoginKit.framework"
   install_framework "Pods/Parse.framework"
   install_framework "Pods/ParseFacebookUtilsV4.framework"
-  install_framework "Pods/RRCamera.framework"
   install_framework "Pods/RxBlocking.framework"
   install_framework "Pods/RxCocoa.framework"
   install_framework "Pods/RxSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Bolts.framework"
+  install_framework "Pods/CameraEngine.framework"
   install_framework "Pods/DynamicColor.framework"
   install_framework "Pods/FBSDKCoreKit.framework"
   install_framework "Pods/FBSDKLoginKit.framework"
   install_framework "Pods/Parse.framework"
   install_framework "Pods/ParseFacebookUtilsV4.framework"
-  install_framework "Pods/RRCamera.framework"
   install_framework "Pods/RxBlocking.framework"
   install_framework "Pods/RxCocoa.framework"
   install_framework "Pods/RxSwift.framework"
