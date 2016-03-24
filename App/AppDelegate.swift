@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "http://localhost:8002/parse"
         }
         Parse.initializeWithConfiguration(configuration)
-        
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         self.appCoordinator.start()
         return true
@@ -44,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     func initStyle() {
+        self.window?.tintColor = UIColor.mainAppColor()
+        
         let navBarApparence = UINavigationBar.appearance()
         navBarApparence.barStyle = .Black
         navBarApparence.tintColor = UIColor.whiteColor()

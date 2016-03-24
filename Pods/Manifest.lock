@@ -18,6 +18,7 @@ PODS:
     - FBSDKLoginKit (~> 4.10)
     - FBSDKTVOSKit (~> 4.10)
     - Parse (~> 1.12)
+  - RRCamera (0.1.0)
   - RxBlocking (2.0.0):
     - RxSwift (~> 2.0)
   - RxCocoa (2.0.0):
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - Parse
   - ParseFacebookUtilsV4
+  - RRCamera
   - RxBlocking (~> 2.0.0-beta.4)
   - RxCocoa (~> 2.0.0-beta.4)
   - RxSwift (~> 2.0.0-beta.4)
@@ -40,6 +42,7 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
   ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
+  RRCamera: d9aeddb2b25730416a7edcf87780345f6255c933
   RxBlocking: a95a10ed54eb5d116f6c9a87047ff671e181d07b
   RxCocoa: b0ebd70b4f7450bdb3c8987b122f8fd568dc1e2f
   RxSwift: d83246efa6f16c50c143bec134649d045498f601

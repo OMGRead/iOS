@@ -12,6 +12,7 @@ enum StoryBoards: String {
     case Main = "Main"
     case Login = "Login"
     case Detail = "Detail"
+    case Add = "Add"
     
     func storyboard() -> UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: nil)
