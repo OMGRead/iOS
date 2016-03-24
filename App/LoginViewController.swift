@@ -35,5 +35,10 @@ class LoginViewController: UIViewController, UIViewControllerCoordinable {
     
     func start() {
         print("start doing stuff here login controller")
+        
+        PFCloud.callFunctionInBackground("hello", withParameters: nil) { (response: AnyObject?, err: NSError?) in
+            print("response : \(response)")
+            print("err : \(err)")
+        }
     }
 }

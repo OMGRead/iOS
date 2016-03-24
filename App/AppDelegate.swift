@@ -24,11 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = ParseClientConfiguration {
             $0.applicationId = "63966E18-33C1-431B-A50E-4F68652C2A4D"
             $0.clientKey = "5B45972F-36B7-4FBB-85A0-B2EA733586CD"
-            $0.server = "http://localhost:8002/parse"
+            $0.server = "http://192.168.0.103:8002/parse"
         }
         Parse.initializeWithConfiguration(configuration)
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         self.appCoordinator.start()
+        CameraManager.start()
         return true
     }
     

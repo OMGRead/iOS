@@ -38,6 +38,7 @@ struct AppCoordinator {
     private mutating func instanceAddCameraBookController() {
         if let vc = AddCameraViewController.instanceController(StoryBoards.Add) as? AddCameraViewController {
             self.rootController.presentViewController(vc, animated: true, completion: nil)
+            vc.start()
         }
     }
     

@@ -7,21 +7,31 @@
 //
 
 import UIKit
+import SnapKit
+import RxSwift
+import AVFoundation
 import CameraEngine
 
 class AddCameraViewController: UIViewController, UIViewControllerCoordinable {
 
-    private lazy var cameraEngine = CameraEngine()
-    
-    override func viewWillAppear(animated: Bool) {
-        self.view.layer.addSublayer(self.cameraEngine.previewLayer)
-    }
+    private let disposeBag = DisposeBag()
+    private var layerPreview: AVCaptureVideoPreviewLayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.blackColor()
+        
+        CameraManager.observableCode().subscribeNext { code in
+            if let code = code {
+                print("code : \(code)")
+            }
+        }.addDisposableTo(self.disposeBag)
     }
     
     func start() {
-        self.cameraEngine.startSession()
+        self.layerPreview = CameraManager.sharedInstance.previewLayer
+        self.layerPreview.frame = self.view.bounds
+        self.view.layer.insertSublayer(self.layerPreview, atIndex: 0)
+        self.view.layer.masksToBounds = true
     }
 }
