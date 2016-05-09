@@ -1,3 +1,4 @@
+platform :ios, '8.0'
 use_frameworks!
 
 post_install do |installer|
@@ -12,7 +13,7 @@ pod 'RxBlocking', '~> 2.0.0-beta.4'
 
 pod 'Parse'
 pod 'DynamicColor'
-pod 'CameraEngine'
+pod 'CameraEngine', '~> 0.9'
 
 pod 'SnapKit'
 pod 'Masonry'

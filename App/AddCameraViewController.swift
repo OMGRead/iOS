@@ -44,7 +44,6 @@ class AddCameraViewController: UIViewController, UIViewControllerCoordinable {
         
         CameraManager.observableCode().subscribeNext { code in
             if let code = code {
-                print("code : \(code)")
                 
                 PFCloud.callFunctionInBackground("findISBN", withParameters: ["code": code], block: { (respnose: AnyObject?, error: NSError?) in
                     
